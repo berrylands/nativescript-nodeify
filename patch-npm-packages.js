@@ -241,7 +241,7 @@ module.exports = function($logger, $projectData, $usbLiveSyncService) {
                         for (var tp in toPatch) {
                             let from = tp;
                             // cater for regexp
-                            if (tp.indexOf('/') === 1) {
+                            if (tp.indexOf('/') === 0) {
                                 const endRegex = tp.lastIndexOf('/');
                                 const flags = tp.length > endRegex + 1 ? tp.substr(endRegex + 1, tp.length - (endRegex + 1)) : '';
                                 const regex = tp.substr(1, endRegex - 1);
